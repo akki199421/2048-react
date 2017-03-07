@@ -1,0 +1,606 @@
+.header{
+	text-align: center;
+  width: 1000px;
+  margin: 0 auto;
+}
+.small-carousel{
+	width: 400px;
+	position: absolute;
+	left: 50%;
+	transform: translate(-200px,70px);
+}
+.score{
+  font-size: 25px;
+  display: inline-block;
+  margin: 0 20px;
+}
+
+ul,li{
+  margin: 0;
+}
+ul li{
+  list-style-type: none;
+}
+font-size: 30px;
+}
+.slick-slider{
+  font-size: 30px;
+}
+.small-carousel .new-game-btn{
+	line-height: 25px;
+	width: 180px;
+	font-size: 15px;
+	position: absolute;
+	left: 110px;
+}
+.slick-prev:before, .slick-next:before{
+  color: #f00;
+}
+.submit-lay-btn{
+  margin: 40px auto;
+  font-size: 25px;
+}
+.game{
+	margin: 0 auto;
+	width: 100%;
+}
+.game-grid{
+	background: #eee;
+	position: absolute;
+	width: 400px;
+  display: block;
+}
+.scores{
+	font-size: 20px;
+}
+.game-pos{
+	position: absolute;
+	left: 50%;
+    transform: translate(-190px,0);
+}
+.game-grid-over{
+	background: #eee;
+	position: absolute;
+	width: 400px;
+	opacity: .9;
+	height: 400px;
+	z-index: 100;
+	font-size: 50px;
+	line-height: 100px;
+	text-align: center;
+	transform: translate(-10px,0);
+	-webkit-transition: all linear .3s;
+	transition: all linear .3s;
+}
+.game-grid-over.ng-enter{
+	transform: translate(-10px,320px)
+}
+.grid-cell.ng-enter{
+
+}
+.btn{
+	 font-size: 30px;
+	 color: #fff;
+    background: #f00;
+    width: 170px;
+    line-height: 70px;
+    font-weight: 600;
+    border-radius: 10px;
+}
+.btn:hover{
+	color: #fff;
+}
+.up-btn{
+	line-height: 25px;
+	width: 180px;
+	font-size: 15px;
+	position: absolute;
+	left: 75%;
+	top: 50%;
+}
+.new-btn{
+    left: 50%;
+    transform: translate(-75px,130px);
+    position: absolute;
+}
+.btm-btn{
+	transform: translate(-75px,260px);
+}
+.slick-dots{
+  z-index: -1;
+}
+.reset-game-btn{
+  width: auto;
+  font-size: 20px;
+  line-height: 20px;
+  height: 36px;
+  margin: 0 10px;
+}
+.grid-cell{
+	background: #ddd;
+	float: left;
+	z-index: -1;
+}
+.game-4.grid-cell,.game-4.tile-cell{
+	width: 80px;
+	height: 80px;
+	margin: 10px;
+	line-height: 80px;
+}
+.game-5.grid-cell,.game-5.tile-cell{
+	width: 64px;
+	height: 64px;
+	margin: 8px;
+	line-height: 64px;
+
+}
+.game-6.grid-cell,.game-6.tile-cell{
+	width: 56.66667px;
+	height: 56.66667px;
+	margin: 5px;
+	line-height: 56.66667px;
+}
+.tile-cell{
+	text-align: center;
+	z-index: 1;
+	position: absolute;
+	background: #f00;
+	float: left;
+	transition: all ease-in-out .2s;
+} 
+.game-4.tile-cell{
+	font-size: 55px;
+}
+.game-5.tile-cell{
+	font-size: 55px;
+}
+.game-6.tile-cell{
+	font-size: 50px;
+}
+.tile-merged{
+	-webkit-animation: pop-up .1s ease-in; 
+}
+@keyframes pop-up{
+	0%{
+		-webkit-transform: scale(.5);
+		transform: scale(.5);
+	}
+	100%{
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+.tile-2{
+	background: #fff;
+}
+.tile-4{
+	background: #EAE0C8;
+}
+.tile-8{
+	background: #F59563;
+}
+.tile-16{
+	background: #39f;
+}
+.tile-32{
+	background: #ffa333;
+}
+.tile-64{
+	background: #cef030;
+}
+.game-4.tile-16,.game-4.tile-32,.game-4.tile-64{
+	font-size: 45px;
+}
+.game-5.tile-16,.game-5.tile-32,.game-5.tile-64{
+	font-size: 45px;
+}
+.game-6.tile-16,.game-6.tile-32,.game-6.tile-64{
+	font-size: 40px;
+}
+.tile-128{
+	background: #E8D8CE;
+}
+.tile-256{
+	background: #990303;
+	color: #fff;
+}
+.tile-512{
+	background: #6BA5DE;
+}
+.game-4.tile-128,.game-4.tile-256,.game-4.tile-512{
+	font-size: 40px;
+}
+.game-5.tile-128,.game-5.tile-256,.game-5.tile-512{
+	font-size: 36px;
+}
+.game-6.tile-128,.game-6.tile-256,.game-6.tile-512{
+	font-size: 30px;
+}
+.tile-1024{
+	background: #DCAD60;
+}
+.tile-2048{
+	background: #B60022;
+}
+.game-4.tile-1024,.game-4.tile-2048{
+	font-size: 30px;
+}
+.game-5.tile-1024,.game-5.tile-2048{
+	font-size: 24px;
+}
+.game-6.tile-1024,.game-6.tile-2048{
+	font-size: 20px;
+}
+/*.tile-inner{
+	text-align: center;
+	line-height: 80px;
+}*/
+.pos-0-0 {
+  transform: translate(0px, 0px);
+}
+
+.pos-0-1 {
+  transform: translate(0px, 100px);
+}
+
+.pos-0-2 {
+  transform: translate(0px, 200px);
+}
+
+.pos-0-3 {
+  transform: translate(0px, 300px);
+}
+
+.pos-1-0 {
+  transform: translate(100px, 0px);
+}
+
+.pos-1-1 {
+  transform: translate(100px, 100px);
+}
+
+.pos-1-2 {
+  transform: translate(100px, 200px);
+}
+
+.pos-1-3 {
+  transform: translate(100px, 300px);
+}
+
+.pos-2-0 {
+  transform: translate(200px, 0px);
+}
+
+.pos-2-1 {
+  transform: translate(200px, 100px);
+}
+
+.pos-2-2 {
+  transform: translate(200px, 200px);
+}
+
+.pos-2-3 {
+  transform: translate(200px, 300px);
+}
+
+.pos-3-0 {
+  transform: translate(300px, 0px);
+}
+
+.pos-3-1 {
+  transform: translate(300px, 100px);
+}
+
+.pos-3-2 {
+  transform: translate(300px, 200px);
+}
+
+.pos-3-3 {
+  transform: translate(300px, 300px);
+}
+.game-4.pos-0-0 {
+  transform: translate(0px, 0px);
+}
+
+.game-4.pos-0-1 {
+  transform: translate(0px, 100px);
+}
+
+.game-4.pos-0-2 {
+  transform: translate(0px, 200px);
+}
+
+.game-4.pos-0-3 {
+  transform: translate(0px, 300px);
+}
+
+.game-4.pos-1-0 {
+  transform: translate(100px, 0px);
+}
+
+.game-4.pos-1-1 {
+  transform: translate(100px, 100px);
+}
+
+.game-4.pos-1-2 {
+  transform: translate(100px, 200px);
+}
+
+.game-4.pos-1-3 {
+  transform: translate(100px, 300px);
+}
+
+.game-4.pos-2-0 {
+  transform: translate(200px, 0px);
+}
+
+.game-4.pos-2-1 {
+  transform: translate(200px, 100px);
+}
+
+.game-4.pos-2-2 {
+  transform: translate(200px, 200px);
+}
+
+.game-4.pos-2-3 {
+  transform: translate(200px, 300px);
+}
+
+.game-4.pos-3-0 {
+  transform: translate(300px, 0px);
+}
+
+.game-4.pos-3-1 {
+  transform: translate(300px, 100px);
+}
+
+.game-4.pos-3-2 {
+  transform: translate(300px, 200px);
+}
+
+.game-4.pos-3-3 {
+  transform: translate(300px, 300px);
+}
+
+.game-5.pos-0-0 {
+  transform: translate(0px, 0px);
+}
+
+.game-5.pos-0-1 {
+  transform: translate(0px, 80px);
+}
+
+.game-5.pos-0-2 {
+  transform: translate(0px, 160px);
+}
+
+.game-5.pos-0-3 {
+  transform: translate(0px, 240px);
+}
+
+.game-5.pos-0-4 {
+  transform: translate(0px, 320px);
+}
+
+.game-5.pos-1-0 {
+  transform: translate(80px, 0px);
+}
+
+.game-5.pos-1-1 {
+  transform: translate(80px, 80px);
+}
+
+.game-5.pos-1-2 {
+  transform: translate(80px, 160px);
+}
+
+.game-5.pos-1-3 {
+  transform: translate(80px, 240px);
+}
+
+.game-5.pos-1-4 {
+  transform: translate(80px, 320px);
+}
+
+.game-5.pos-2-0 {
+  transform: translate(160px, 0px);
+}
+
+.game-5.pos-2-1 {
+  transform: translate(160px, 80px);
+}
+
+.game-5.pos-2-2 {
+  transform: translate(160px, 160px);
+}
+
+.game-5.pos-2-3 {
+  transform: translate(160px, 240px);
+}
+
+.game-5.pos-2-4 {
+  transform: translate(160px, 320px);
+}
+
+.game-5.pos-3-0 {
+  transform: translate(240px, 0px);
+}
+
+.game-5.pos-3-1 {
+  transform: translate(240px, 80px);
+}
+
+.game-5.pos-3-2 {
+  transform: translate(240px, 160px);
+}
+
+.game-5.pos-3-3 {
+  transform: translate(240px, 240px);
+}
+
+.game-5.pos-3-4 {
+  transform: translate(240px, 320px);
+}
+
+.game-5.pos-4-0 {
+  transform: translate(320px, 0px);
+}
+
+.game-5.pos-4-1 {
+  transform: translate(320px, 80px);
+}
+
+.game-5.pos-4-2 {
+  transform: translate(320px, 160px);
+}
+
+.game-5.pos-4-3 {
+  transform: translate(320px, 240px);
+}
+
+.game-5.pos-4-4 {
+  transform: translate(320px, 320px);
+}
+.game-6.pos-0-0 {
+  transform: translate(0px, 0px);
+}
+
+.game-6.pos-0-1 {
+  transform: translate(0px, 66.66667px);
+}
+
+.game-6.pos-0-2 {
+  transform: translate(0px, 133.33333px);
+}
+
+.game-6.pos-0-3 {
+  transform: translate(0px, 200.0px);
+}
+
+.game-6.pos-0-4 {
+  transform: translate(0px, 266.66667px);
+}
+
+.game-6.pos-0-5 {
+  transform: translate(0px, 333.33334px);
+}
+
+.game-6.pos-1-0 {
+  transform: translate(66.66667px, 0px);
+}
+
+.game-6.pos-1-1 {
+  transform: translate(66.66667px, 66.66667px);
+}
+
+.game-6.pos-1-2 {
+  transform: translate(66.66667px, 133.33333px);
+}
+
+.game-6.pos-1-3 {
+  transform: translate(66.66667px, 200.0px);
+}
+
+.game-6.pos-1-4 {
+  transform: translate(66.66667px, 266.66667px);
+}
+
+.game-6.pos-1-5 {
+  transform: translate(66.66667px, 333.33334px);
+}
+
+.game-6.pos-2-0 {
+  transform: translate(133.33333px, 0px);
+}
+
+.game-6.pos-2-1 {
+  transform: translate(133.33333px, 66.66667px);
+}
+
+.game-6.pos-2-2 {
+  transform: translate(133.33333px, 133.33333px);
+}
+
+.game-6.pos-2-3 {
+  transform: translate(133.33333px, 200.0px);
+}
+
+.game-6.pos-2-4 {
+  transform: translate(133.33333px, 266.66667px);
+}
+
+.game-6.pos-2-5 {
+  transform: translate(133.33333px, 333.33334px);
+}
+
+.game-6.pos-3-0 {
+  transform: translate(200.0px, 0px);
+}
+
+.game-6.pos-3-1 {
+  transform: translate(200.0px, 66.66667px);
+}
+
+.game-6.pos-3-2 {
+  transform: translate(200.0px, 133.33333px);
+}
+
+.game-6.pos-3-3 {
+  transform: translate(200.0px, 200.0px);
+}
+
+.game-6.pos-3-4 {
+  transform: translate(200.0px, 266.66667px);
+}
+
+.game-6.pos-3-5 {
+  transform: translate(200.0px, 333.33334px);
+}
+
+.game-6.pos-4-0 {
+  transform: translate(266.66667px, 0px);
+}
+
+.game-6.pos-4-1 {
+  transform: translate(266.66667px, 66.66667px);
+}
+
+.game-6.pos-4-2 {
+  transform: translate(266.66667px, 133.33333px);
+}
+
+.game-6.pos-4-3 {
+  transform: translate(266.66667px, 200.0px);
+}
+
+.game-6.pos-4-4 {
+  transform: translate(266.66667px, 266.66667px);
+}
+
+.game-6.pos-4-5 {
+  transform: translate(266.66667px, 333.33334px);
+}
+
+.game-6.pos-5-0 {
+  transform: translate(333.33334px, 0px);
+}
+
+.game-6.pos-5-1 {
+  transform: translate(333.33334px, 66.66667px);
+}
+
+.game-6.pos-5-2 {
+  transform: translate(333.33334px, 133.33333px);
+}
+
+.game-6.pos-5-3 {
+  transform: translate(333.33334px, 200.0px);
+}
+
+.game-6.pos-5-4 {
+  transform: translate(333.33334px, 266.66667px);
+}
+
+.game-6.pos-5-5 {
+  transform: translate(333.33334px, 333.33334px);
+}
