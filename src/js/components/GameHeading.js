@@ -7,7 +7,7 @@ export default class GameHeading extends React.Component{
 			<div class="header">
 				<div class="heading">
 					<h1>2048</h1>
-					<h4>The Game 2048 using AngularJs</h4>
+					<h4>The Game 2048 using ReactJS</h4>
 					<div>
 						<div class="score">Score : {score}</div>
 						<div class="btn reset-game-btn" onClick={this.props.undoMove}>Undo Move</div>
