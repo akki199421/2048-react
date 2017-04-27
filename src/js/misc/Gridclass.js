@@ -26,7 +26,7 @@ class Tile{
 		this.value = value;
 		this.x = position.x;
 		this.y = position.y;
-		this.merged = false;
+		this.merged = true;
 		this.moved = false;
 		this.ID = new IDGenerator().generate();
 	}
@@ -51,7 +51,7 @@ class Tile{
 		};
 	}
 	tileMoved(){
-			this.moved = true;
+		this.moved = true;
 	}		
 }
 
@@ -100,7 +100,6 @@ export default class Gridclass{
 			return num[Math.floor((Math.random()*(num.length)))];
 	}
 	_isAvailableandValid(cell){
-		var size = this.gridsize;
 		if(this._isValidPosition({x:cell.x,y:cell.y}) && this.grid[this._calcCord({x:cell.x,y:cell.y})]===null)
 			return cell;
 		return false;
@@ -237,7 +236,6 @@ export default class Gridclass{
 	}
 	noMatchLeft(){
 		var result = true;
-		var that = this;
 	 	this.grid.forEach((e) => {
 	 		Object.keys(this.pos).map((key,index) => {
 	 			var n = this.pos[key];
