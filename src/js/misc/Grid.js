@@ -58,12 +58,6 @@ export default class Grid extends React.Component {
 		const { grid,gridsize } = this.state.gridCls;
 		const { score,gameOver,gameWon } = this.state;
 		const cells = grid.map((tile,i) =>   <GridCell key={i} gridSize={gridsize}/>);
-		const tiles = grid.map((tile,i) => {
-			if(tile){
-				return <GridTile key={i} gridSize={gridsize} tile={tile}/>
-			}
-		});
-
 		return(
 			<div>
 				<GameHeading score={score} reInit={this.reInit.bind(this)} undoMove={this.undoMove.bind(this)}/>
@@ -71,15 +65,13 @@ export default class Grid extends React.Component {
 					<div class="game-pos">
 						<div class="game-grid row">
 						{cells}
-						{tiles}
+						<GridTile tile={grid} gridSize={gridsize} />
 						</div>
 						{gameWon || gameOver ? <GameEnd gameWon={gameWon} gameOver={gameOver} continuefn={this.continuefn.bind(this)}
 						reInit={this.reInit.bind(this)}/>: null}
 					</div>
 				</div>
-				
-				
 			</div>
-			);
+		);
 	}
 }
