@@ -1,0 +1,68 @@
+@for $gridSize from 4 through 6{
+  $lowSize : $gridSize - 1;
+  $pxSize : 400px/$gridSize;
+  $game : game_#{$gridSize};
+  @for $row from 0 through $lowSize {
+    @for $column from 0 through $lowSize {
+      .#{$game}.position_#{$row}_#{$column}:not(.isMoving) {
+        top: $pxSize * $row ;
+        left: $pxSize * $column ;
+      }
+    }
+  }
+
+  @for $fromRow from 0 through $lowSize {
+    @for $toRow from 0 through $lowSize {
+      
+      $name: row_from_#{$fromRow}_to_#{$toRow};
+  
+      @if $fromRow == $toRow {
+        .#{$game}.#{$name} {
+          top: $pxSize * $toRow;
+        }
+      } @else {
+        .#{$game}.#{$name} {
+          animation-duration: 0.30s;
+          animation-name: $game+$name;
+          animation-fill-mode: forwards;
+        }
+  
+        @keyframes #{$game}#{$name} {
+          from {
+            top: $pxSize * $fromRow;
+          }
+          to {
+            top: $pxSize * $toRow;
+          }
+        }
+      }
+    }
+  }
+  
+  @for $fromColumn from 0 through $lowSize {
+    @for $toColumn from 0 through $lowSize {
+      $name: column_from_#{$fromColumn}_to_#{$toColumn};
+  
+      @if $fromColumn == $toColumn {
+        .#{$game}.#{$name} {
+          left: $pxSize * $toColumn;
+        }
+      } @else {
+        .#{$game}.#{$name} {
+          animation-duration: 0.30s;
+          animation-name: $game+$name;
+          animation-fill-mode: forwards;
+        };
+  
+        @keyframes #{$game}#{$name}{
+          from {
+            left: $pxSize * $fromColumn;
+          }
+          to {
+            left: $pxSize * $toColumn;
+          }
+        }
+      }
+    }
+  }
+}
